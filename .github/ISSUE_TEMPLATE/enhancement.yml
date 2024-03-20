@@ -1,7 +1,7 @@
 name: Enhancement Request
 description: Request an enhancement or a new feature in a widget.
 labels: ["Type: Enhancement"]
-projects: ["ArcGIS/162"]
+projects: ["chris-fox/2"]
 body:
   - type: dropdown
     id: widget
