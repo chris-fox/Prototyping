@@ -1,5 +1,15 @@
-"Widget: Near Me":
-    - 'Near Me'
+"Widget: Branch Version Management":
+    - 'Branch Version Management'
+    
+"Widget: Coordinate Conversion":
+    - 'Coordinate Conversion'
     
 "Widget: Elevation Profile":
     - 'Elevation Profile'
+    
+"Widget: Near Me":
+    - 'Near Me'
+    
+"Widget: Utility Network Trace":
+    - 'Utility Network Trace'
+    
