@@ -10,7 +10,7 @@ body:
     attributes:
       label: Widget
       multiple: true
-      description: Select the widget you are observing this issue.
+      description: Select the widgets you are observing this issue.
       options:
         - Branch Version Management
         - Coordinate Conversion
