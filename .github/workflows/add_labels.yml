@@ -1,0 +1,47 @@
+name: Add Labels
+
+on:
+  issues:
+    types: opened
+
+jobs:
+  add_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: branch version management
+        uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ contains(github.event.comment.body, 'Branch Version Management') }}
+        with:
+          labels: |
+            Widget: Branch Version Management
+
+      - name: coordinate conversion
+        uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ contains(github.event.comment.body, 'Coordinate Conversion') }}
+        with:
+          labels: |
+            Widget: Coordinate Conversion
+            
+      - name: elevation profile
+        uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ contains(github.event.comment.body, 'Elevation Profile') }}
+        with:
+          labels: |
+            Widget: Elevation Profile
+
+      - name: near me
+        uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ contains(github.event.comment.body, 'Near Me') }}
+        with:
+          labels: |
+            Widget: Near Me
+            
+      - name: utility network trace
+        uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ contains(github.event.comment.body, 'Utility Network Trace') }}
+        with:
+          labels: |
+            Widget: Utility Network Trace
