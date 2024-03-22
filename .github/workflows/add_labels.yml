@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: branch version management
-        uses: actions-ecosystem/action-add-labels@v1
+        uses: actions-ecosystem/action-add-labels@v1.1.0
         if: ${{ contains(github.event.issue.body, 'Branch Version Management') }}
         with:
           labels: |
-            Widget - Branch Version Management
+            Branch Version Management
 
       - name: coordinate conversion
         uses: actions-ecosystem/action-add-labels@v1
