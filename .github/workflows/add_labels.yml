@@ -13,7 +13,7 @@ jobs:
         if: ${{ contains(github.event.issue.body, 'Branch Version Management') }}
         with:
           labels: |
-            Widget: Branch Version Management
+            Widget - Branch Version Management
 
       - name: coordinate conversion
         uses: actions-ecosystem/action-add-labels@v1
