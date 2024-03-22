@@ -12,13 +12,15 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1.1.0
         if: ${{ contains(github.event.issue.body, 'Branch Version Management') }}
         with:
+          github_token: ${{ secrets.github_token }}
           labels: |
-            Branch Version Management
+            Widget: Branch Version Management
 
       - name: coordinate conversion
         uses: actions-ecosystem/action-add-labels@v1
         if: ${{ contains(github.event.issue.body, 'Coordinate Conversion') }}
         with:
+          github_token: ${{ secrets.github_token }}
           labels: |
             Widget: Coordinate Conversion
             
@@ -26,6 +28,7 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1
         if: ${{ contains(github.event.issue.body, 'Elevation Profile') }}
         with:
+          github_token: ${{ secrets.github_token }}
           labels: |
             Widget: Elevation Profile
 
@@ -33,6 +36,7 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1
         if: ${{ contains(github.event.issue.body, 'Near Me') }}
         with:
+          github_token: ${{ secrets.github_token }}
           labels: |
             Widget: Near Me
             
@@ -40,5 +44,6 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1
         if: ${{ contains(github.event.issue.body, 'Utility Network Trace') }}
         with:
+          github_token: ${{ secrets.github_token }}
           labels: |
             Widget: Utility Network Trace
