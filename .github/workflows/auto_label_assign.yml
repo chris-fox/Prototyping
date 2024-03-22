@@ -1,4 +1,4 @@
-name: Add Labels
+name: Auto Label and Assign
 
 on:
   issues:
@@ -51,3 +51,46 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             Widget: Utility Network Trace
+            
+  add_assignee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: branch version management
+        uses: actions-ecosystem/action-add-assignees@v1.0.0
+        if: ${{ contains(github.event.issue.body, 'Branch Version Management') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            chris-fox
+
+      - name: coordinate conversion
+        uses: actions-ecosystem/action-add-assignees@v1.0.0
+        if: ${{ contains(github.event.issue.body, 'Coordinate Conversion') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            chris-fox
+            
+      - name: elevation profile
+        uses: actions-ecosystem/action-add-assignees@v1.0.0
+        if: ${{ contains(github.event.issue.body, 'Elevation Profile') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            chris-fox
+
+      - name: near me
+        uses: actions-ecosystem/action-add-assignees@v1.0.0
+        if: ${{ contains(github.event.issue.body, 'Near Me') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            chris-fox
+            
+      - name: utility network trace
+        uses: actions-ecosystem/action-add-assignees@v1.0.0
+        if: ${{ contains(github.event.issue.body, 'Utility Network Trace') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            chris-fox
