@@ -1,4 +1,4 @@
-name: Auto Label and Assign
+name: Auto Label and Assign Issues
 
 on:
   issues:
@@ -52,7 +52,7 @@ jobs:
           labels: |
             Widget: Utility Network Trace
             
-  add_assignee:
+  add_assignees:
     runs-on: ubuntu-latest
     steps:
       - name: branch version management
