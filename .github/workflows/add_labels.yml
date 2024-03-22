@@ -8,14 +8,11 @@ jobs:
   add_labels:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v4.1.1
-      
       - name: branch version management
         uses: actions-ecosystem/action-add-labels@v1.1.0
         if: ${{ contains(github.event.issue.body, 'Branch Version Management') }}
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             Widget: Branch Version Management
 
@@ -23,7 +20,7 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1.1.0
         if: ${{ contains(github.event.issue.body, 'Coordinate Conversion') }}
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             Widget: Coordinate Conversion
             
@@ -31,7 +28,7 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1.1.0
         if: ${{ contains(github.event.issue.body, 'Elevation Profile') }}
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             Widget: Elevation Profile
 
@@ -39,7 +36,7 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1.1.0
         if: ${{ contains(github.event.issue.body, 'Near Me') }}
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             Widget: Near Me
             
@@ -47,6 +44,6 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1.1.0
         if: ${{ contains(github.event.issue.body, 'Utility Network Trace') }}
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             Widget: Utility Network Trace
