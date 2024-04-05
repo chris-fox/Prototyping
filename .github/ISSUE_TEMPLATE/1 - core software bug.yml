@@ -1,0 +1,104 @@
+name: Core Software Bug
+description: Report a bug with ArcGIS impacting an ArcGIS Solution.
+labels: ["Type: Bug"]
+#title: ""
+#assignees: [""]
+#projects: [""]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        - Please [check for existing issues](https://devtopia.esri.com/WebGIS/solutions-web-development/issues) to avoid duplicates. If someone has already opened an issue for what you are experiencing, please add a comment to the existing issue instead of creating a new one.
+        - For testing tips & tricks, please check the [Wiki](https://devtopia.esri.com/WebGIS/solutions-web-development/wiki/Testing-Tips-&-Tricks).
+  - type: dropdown
+    id: esri-product
+    validations:
+      required: true
+    attributes:
+      label: Esri product
+      multiple: false
+      description: Select in which product you are observing this issue.
+      options:
+        - N/A
+        - ArcGIS Arcade
+        - ArcGIS Dashboards
+        - ArcGIS Enterprise
+        - ArcGIS Experience Builder
+        - ArcGIS Field Apps
+        - ArcGIS Hub
+        - ArcGIS Indoors
+        - ArcGIS Insights
+        - ArcGIS Instant Apps
+        - ArcGIS Knowledge
+        - ArcGIS Living Atlas
+        - ArcGIS Maps SDK for JavaScript
+        - ArcGIS Map Viewer
+        - ArcGIS Mission
+        - ArcGIS Monitor
+        - ArcGIS Online
+        - ArcGIS Pro
+        - ArcGIS QuickCapture
+        - ArcGIS Scene Viewer
+        - ArcGIS Site Scan
+        - ArcGIS StoryMaps
+        - ArcGIS Survey123
+        - ArcGIS Velocity
+        - ArcGIS Web AppBuilder
+        - ArcGIS Web Editor
+        - ArcGIS Workflow Manager
+        - Smart Forms (Editor)
+        - Other
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the bug
+      description: A clear description of the issue (optionally include before/after screenshots/GIFs).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected instead, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Reproduction steps & sample
+      description: |
+        Provide clear, numbered steps to reproduce this bug with a sample app and data if needed. Recordings are also helpful. Make sure that web maps, web scenes, portal items, services and other resources used to reproduce this bug are accessible.
+      placeholder: |
+        Link to web map/app:
+        1. Go to '...'
+        2. Click on '...'
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: relevant
+    attributes:
+      label: Other relevant info
+      description: (e.g., Browser, OS, version, related issues, suggestions/resources on how to fix, etc.)
+    validations:
+      required: false
+  - type: dropdown
+    id: priority-impact
+    validations:
+      required: true
+    attributes:
+      label: Priority impact
+      multiple: false
+      description: What is the impact to you or your team?
+      options:
+        - Low - not time sensitive
+        - Medium - want for an upcoming release
+        - High - want for next release
+        - Critical - emergency! needs patching
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: How does the issue effect your team or your work? Can range from minor to blocking or prohibiting workflows. Helps us prioritize what we'll work on and communicate with the responsible party first.
+    validations:
+      required: false
