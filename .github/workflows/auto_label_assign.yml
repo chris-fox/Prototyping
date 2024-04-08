@@ -9,89 +9,323 @@ permissions:
   contents: read
 
 jobs:
-  add_labels:
+  product_assignees:
     runs-on: ubuntu-latest
     steps:
-      - name: branch version management
-        uses: actions-ecosystem/action-add-labels@v1.1.0
-        if: ${{ contains(github.event.issue.body, 'Branch Version Management') }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: |
-            Widget: Branch Version Management
-
-      - name: coordinate conversion
-        uses: actions-ecosystem/action-add-labels@v1.1.0
-        if: ${{ contains(github.event.issue.body, 'Coordinate Conversion') }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: |
-            Widget: Coordinate Conversion
-            
-      - name: elevation profile
-        uses: actions-ecosystem/action-add-labels@v1.1.0
-        if: ${{ contains(github.event.issue.body, 'Elevation Profile') }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: |
-            Widget: Elevation Profile
-
-      - name: near me
-        uses: actions-ecosystem/action-add-labels@v1.1.0
-        if: ${{ contains(github.event.issue.body, 'Near Me') }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: |
-            Widget: Near Me
-            
-      - name: utility network trace
-        uses: actions-ecosystem/action-add-labels@v1.1.0
-        if: ${{ contains(github.event.issue.body, 'Utility Network Trace') }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: |
-            Widget: Utility Network Trace
-            
-  add_assignees:
-    runs-on: ubuntu-latest
-    steps:
-      - name: branch version management
+      - name: avezina
         uses: actions-ecosystem/action-add-assignees@v1.0.0
-        if: ${{ contains(github.event.issue.body, 'Branch Version Management') }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: |
-            chris-fox
-
-      - name: coordinate conversion
-        uses: actions-ecosystem/action-add-assignees@v1.0.0
-        if: ${{ contains(github.event.issue.body, 'Coordinate Conversion') }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: |
-            chris-fox
-            
-      - name: elevation profile
-        uses: actions-ecosystem/action-add-assignees@v1.0.0
-        if: ${{ contains(github.event.issue.body, 'Elevation Profile') }}
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Experience Builder') || contains(github.event.issue.body, 'ArcGIS Instant Apps') || contains(github.event.issue.body, 'ArcGIS Map Viewer') || contains(github.event.issue.body, 'ArcGIS Maps SDK for JavasScript') || contains(github.event.issue.body, 'ArcGIS Online') || contains(github.event.issue.body, 'ArcGIS Pro') || contains(github.event.issue.body, 'ArcGIS Web AppBuilder') || contains(github.event.issue.body, 'ArcGIS Web Editor') || contains(github.event.issue.body, 'ArcGIS Smart Forms (Editor)') }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           assignees: |
             avezina
 
-      - name: near me
+      - name: brandonarmstrong
         uses: actions-ecosystem/action-add-assignees@v1.0.0
-        if: ${{ contains(github.event.issue.body, 'Near Me') }}
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Dashboards') || contains(github.event.issue.body, 'ArcGIS Field Apps') || contains(github.event.issue.body, 'ArcGIS Hub') || contains(github.event.issue.body, 'ArcGIS QuickCapture') || contains(github.event.issue.body, 'ArcGIS Survey123') || }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           assignees: |
-            chris-fox
+            BrandonArmstrong
             
-      - name: utility network trace
+      - name: chris-fox
         uses: actions-ecosystem/action-add-assignees@v1.0.0
-        if: ${{ contains(github.event.issue.body, 'Utility Network Trace') }}
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Arcade') || contains(github.event.issue.body, 'ArcGIS Data Pipelines') || contains(github.event.issue.body, 'ArcGIS Enterprise') || contains(github.event.issue.body, 'ArcGIS Indoors') || contains(github.event.issue.body, 'ArcGIS Insights') || contains(github.event.issue.body, 'ArcGIS Knowledge') || contains(github.event.issue.body, 'ArcGIS Living Atlas') || contains(github.event.issue.body, 'ArcGIS Mission') || contains(github.event.issue.body, 'ArcGIS Monitor') || contains(github.event.issue.body, 'ArcGIS Site Scan') || contains(github.event.issue.body, 'ArcGIS Scene Viewer') || contains(github.event.issue.body, 'ArcGIS Solutions App') || contains(github.event.issue.body, 'ArcGIS StoryMaps') || contains(github.event.issue.body, 'ArcGIS Velocity') || contains(github.event.issue.body, 'ArcGIS Workflow Manager') || contains(github.event.issue.body, 'ArcGIS Solution Item Tools') }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           assignees: |
             chris-fox
-            avezina
+
+  product_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: arcgis-arcade
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Arcade') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Arcade
+
+      - name: arcgis-dashboards
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Dashboards') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Dashboards
+            
+      - name: arcgis-data-pipelines
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Data Pipelines') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Data Pipelines
+
+      - name: arcgis-enterprise
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Enterprise') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Enterprise
+            
+      - name: arcgis-experience-builder
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Experience Builder') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Experience Builder
+            
+      - name: arcgis-field-apps
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Field Apps') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Field Apps
+
+      - name: arcgis-hub
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Hub') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Hub
+            
+      - name: arcgis-indoors
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Indoors') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Indoors
+
+      - name: arcgis-insights
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Insights') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Insights
+            
+      - name: arcgis-instant-apps
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Instant Apps') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Instant Apps
+
+      - name: arcgis-knowledge
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Knowledge') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Knowledge
+
+      - name: arcgis-living-atlas
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Living Atlas') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Living Atlas
+            
+      - name: arcgis-map-viewer
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Map Viewer') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Map Viewer
+
+      - name: arcgis-maps-sdk-for-javascript
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Maps SDK for JavaScript') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Maps SDK for JavaScript
+            
+      - name: arcgis-mission
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Mission') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Mission
+            
+      - name: arcgis-monitor
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Monito') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Monitor
+
+      - name: arcgis-online
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Online') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Online
+            
+      - name: arcgis-pro
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Pro') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Pro
+
+      - name: arcgis-quickcapture
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS QuickCapture') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS QuickCapture
+            
+      - name: arcgis-scene-viewer
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Scene Viewer') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Scene Viewer
+            
+      - name: arcgis-site-scan
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Site Scan') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Site Scan
+
+      - name: arcgis-solutions-app
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Solutions App') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Solutions App
+            
+      - name: arcgis-storymaps
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS StoryMaps') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS StoryMaps
+
+      - name: arcgis-survey123
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Survey123') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Survey123
+            
+      - name: arcgis-velocity
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Velocity') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Velocity
+            
+      - name: arcgis-web-appbuilder
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Web AppBuilder') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Web AppBuilder
+
+      - name: arcgis-web-editor
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Web Editor') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Web Editor
+            
+      - name: arcgis-workflow-manager
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Workflow Manager') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: ArcGIS Workflow Manager
+            
+      - name: smart-forms
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'Smart Forms (Editor)') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: Smart Forms (Editor)
+            
+      - name: solution-item-tools
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'Solution Item Tools') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Product: Solution Item Tools
+            
+  dev_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: app-template
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'App Template') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Dev: App Template
+
+      - name: arcade
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'Arcade / Attribute Rule') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Dev: Arcade / Attribute Rule
+            
+      - name: html-css
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'HTML / CSS') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Dev: HTML / CSS
+
+      - name: javascript
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'JavaScript Function') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Dev: JavaScript Function
+            
+      - name: python
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'Python Tool / Notebook') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Dev: Python Tool / Notebook
+            
+      - name: widget
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        if: ${{ contains(github.event.issue.body, 'Widget / Component') }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            Dev: Widget / Component
