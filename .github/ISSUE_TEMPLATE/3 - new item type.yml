@@ -10,7 +10,7 @@ body:
       value: |
         Please [check for existing issues](https://devtopia.esri.com/WebGIS/solutions-web-development/issues) to avoid duplicates. If someone has already opened an issue for what you are requesting, please add a comment to the existing issue instead of creating a new one.
         
-        Please do not modify any of the default labels, assignees, projects, milestones when submitting the issue.
+        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
   - type: textarea
     id: describe
     attributes:
