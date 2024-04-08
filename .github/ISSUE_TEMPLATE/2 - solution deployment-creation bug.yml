@@ -18,7 +18,8 @@ body:
       multiple: false
       description: Select in which app or tool you are observing this issue.
       options:
-        - ArcGIS Solutions Deployment or Creation app
+        - ArcGIS Solutions Deployment app
+        - ArcGIS Solutions Creation app
         - Solution Item Tools
   - type: textarea
     id: describe
