@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   product_assignees:
-    if: contains(github.event.issue.labels.*.name, 'Type: Bug')
+    if: ${{ contains(github.event.issue.labels.*.name, 'Type: Bug') }}
     runs-on: ubuntu-latest
     steps:
       - name: avezina
