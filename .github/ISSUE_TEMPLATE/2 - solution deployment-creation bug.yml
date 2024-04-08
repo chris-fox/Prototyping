@@ -3,7 +3,7 @@ description: Report a bug with the ArcGIS Solutions Deployment app, Creation app
 labels: ["Type: Bug", "Product: ArcGIS Solutions App"]
 #title: ""
 #assignees: [""]
-#projects: [""]
+projects: ["chris-fox/3"]
 body:
   - type: markdown
     attributes:

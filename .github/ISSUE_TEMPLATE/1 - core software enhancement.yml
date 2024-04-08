@@ -3,7 +3,7 @@ description: Submit an enhancement for ArcGIS that would benefit an ArcGIS Solut
 labels: ["Type: Enhancement"]
 #title: ""
 #assignees: [""]
-#projects: [""]
+projects: ["chris-fox/5"]
 body:
   - type: markdown
     attributes:

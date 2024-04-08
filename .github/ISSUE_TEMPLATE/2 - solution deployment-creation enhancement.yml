@@ -3,7 +3,7 @@ description: Submit an enhancement for the ArcGIS Solutions Deployment app, Crea
 labels: ["Type: Enhancement", "Product: ArcGIS Solutions App"]
 #title: ""
 #assignees: [""]
-#projects: [""]
+projects: ["chris-fox/3"]
 body:
   - type: markdown
     attributes:
