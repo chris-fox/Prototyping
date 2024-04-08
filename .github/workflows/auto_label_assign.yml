@@ -11,7 +11,7 @@ permissions:
 jobs:
   bug_enhancement_assignees:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.issue.labels.*.name, 'Type\u0003ABug') || contains(github.event.issue.labels.*.name, 'Type\u0003AEnhancement') }}
+    if: ${{ contains(github.event.issue.labels.*.name, 'Type\u0003A Bug') || contains(github.event.issue.labels.*.name, 'Type\u0003A Enhancement') }}
     steps:
       - name: avezina
         uses: actions-ecosystem/action-add-assignees@v1.0.0
