@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   bug_enhancement_assignees:
-    if: ${{ contains(github.event.issue.labels.*.name, 'Bug') || contains(github.event.issue.labels.*.name, 'Enhancement') }}
+    if: ${{ contains(github.event.issue.labels.*.name, 'Bug') }}
     runs-on: ubuntu-latest
     steps:
       - name: avezina
