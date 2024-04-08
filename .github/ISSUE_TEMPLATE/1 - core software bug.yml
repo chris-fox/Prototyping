@@ -3,7 +3,7 @@ description: Report a bug with ArcGIS impacting an ArcGIS Solution.
 labels: ["Type: Bug"]
 #title: ""
 #assignees: [""]
-#projects: [""]
+projects: ["chris-fox/5"]
 body:
   - type: markdown
     attributes:
