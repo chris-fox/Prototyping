@@ -22,7 +22,7 @@ jobs:
 
       - name: brandonarmstrong
         uses: actions-ecosystem/action-add-assignees@v1.0.0
-        if: ${{ contains(github.event.issue.body, 'ArcGIS Dashboards') || contains(github.event.issue.body, 'ArcGIS Field Apps') || contains(github.event.issue.body, 'ArcGIS Hub') || contains(github.event.issue.body, 'ArcGIS QuickCapture') || contains(github.event.issue.body, 'ArcGIS Survey123') || }}
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Dashboards') || contains(github.event.issue.body, 'ArcGIS Field Apps') || contains(github.event.issue.body, 'ArcGIS Hub') || contains(github.event.issue.body, 'ArcGIS QuickCapture') || contains(github.event.issue.body, 'ArcGIS Survey123') }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           assignees: |
