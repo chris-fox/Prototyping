@@ -2,7 +2,7 @@ name: New Item Type
 description: Request support for packaging and deploying a new item type to support an ArcGIS Solution.
 labels: ["Type: New Item Type", "Product: ArcGIS Solutions App"]
 #title: ""
-#assignees: [""]
+assignees: ["chris-fox"]
 projects: ["chris-fox/3"]
 body:
   - type: markdown

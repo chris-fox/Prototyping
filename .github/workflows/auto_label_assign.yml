@@ -31,7 +31,8 @@ jobs:
             
       - name: chris-fox
         uses: actions-ecosystem/action-add-assignees@v1.0.0
-        if: ${{ contains(github.event.issue.body, 'ArcGIS Arcade') || contains(github.event.issue.body, 'ArcGIS Data Pipelines') || contains(github.event.issue.body, 'ArcGIS Enterprise') || contains(github.event.issue.body, 'ArcGIS Indoors') || contains(github.event.issue.body, 'ArcGIS Insights') || contains(github.event.issue.body, 'ArcGIS Knowledge') || contains(github.event.issue.body, 'ArcGIS Living Atlas') || contains(github.event.issue.body, 'ArcGIS Mission') || contains(github.event.issue.body, 'ArcGIS Monitor') || contains(github.event.issue.body, 'ArcGIS Site Scan') || contains(github.event.issue.body, 'ArcGIS Scene Viewer') || contains(github.event.issue.body, 'ArcGIS Solutions App') || contains(github.event.issue.body, 'ArcGIS StoryMaps') || contains(github.event.issue.body, 'ArcGIS Velocity') || contains(github.event.issue.body, 'ArcGIS Workflow Manager') || contains(github.event.issue.body, 'ArcGIS Solution Item Tools') }}
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Arcade') || contains(github.event.issue.body, 'ArcGIS Data Pipelines') || contains(github.event.issue.body, 'ArcGIS Enterprise') || contains(github.event.issue.body, 'ArcGIS Indoors') || contains(github.event.issue.body, 'ArcGIS Insights') || contains(github.event.issue.body, 'ArcGIS Knowledge') || contains(github.event.issue.body, 'ArcGIS Living Atlas') || contains(github.event.issue.body, 'ArcGIS Mission') || contains(github.event.issue.body, 'ArcGIS Monitor') || contains(github.event.issue.body, 'ArcGIS Site Scan') || contains(github.event.issue.body, 'ArcGIS Scene Viewer') || contains(github.event.issue.body, 'ArcGIS Solutions App') || contains(github.event.issue.body, 'ArcGIS Solutions Deployment App') || contains(github.event.issue.body, 'ArcGIS Solutions Creation App') || 
+        contains(github.event.issue.body, 'ArcGIS StoryMaps') || contains(github.event.issue.body, 'ArcGIS Velocity') || contains(github.event.issue.body, 'ArcGIS Workflow Manager') || contains(github.event.issue.body, 'ArcGIS Solution Item Tools') }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           assignees: |
@@ -210,7 +211,7 @@ jobs:
 
       - name: arcgis-solutions-app
         uses: actions-ecosystem/action-add-labels@v1.1.0
-        if: ${{ contains(github.event.issue.body, 'ArcGIS Solutions App') }}
+        if: ${{ contains(github.event.issue.body, 'ArcGIS Solutions App') || contains(github.event.issue.body, 'ArcGIS Solutions Deployment App') || contains(github.event.issue.body, 'ArcGIS Solutions Creation App')}}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
