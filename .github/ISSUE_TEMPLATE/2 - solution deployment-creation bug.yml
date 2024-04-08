@@ -1,6 +1,6 @@
 name: Solution Deployment/Creation Bug
 description: Report a bug with the ArcGIS Solutions Deployment app, Creation app or Solution Item Tools.
-labels: ["Type: Bug", "Product: ArcGIS Solutions App"]
+labels: ["Type: Bug"]
 #title: ""
 #assignees: [""]
 projects: ["chris-fox/3"]
@@ -18,8 +18,7 @@ body:
       multiple: false
       description: Select in which app or tool you are observing this issue.
       options:
-        - ArcGIS Solutions Deployment app
-        - ArcGIS Solutions Creation app
+        - ArcGIS Solutions Deployment or Creation app
         - Solution Item Tools
   - type: textarea
     id: describe

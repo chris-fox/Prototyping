@@ -1,6 +1,6 @@
 name: Solution Deployment/Creation Enhancement
 description: Submit an enhancement for the ArcGIS Solutions Deployment app, Creation app or Solution Item Tools.
-labels: ["Type: Enhancement", "Product: ArcGIS Solutions App"]
+labels: ["Type: Enhancement"]
 #title: ""
 #assignees: [""]
 projects: ["chris-fox/3"]
@@ -18,8 +18,7 @@ body:
       multiple: false
       description: Select in which app or tool you are observing this issue.
       options:
-        - ArcGIS Solutions Deployment app
-        - ArcGIS Solutions Creation app
+        - ArcGIS Solutions Deployment or Creation app
         - Solution Item Tools
   - type: textarea
     id: describe
