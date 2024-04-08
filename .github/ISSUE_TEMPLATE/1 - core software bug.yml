@@ -8,9 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please [check for existing issues](https://devtopia.esri.com/WebGIS/solutions-web-development/issues) to avoid duplicates. If someone has already opened an issue for what you are experiencing, please add a comment to the existing issue instead of creating a new one. 
-        
-        For testing tips & tricks, please check the [Wiki](https://devtopia.esri.com/WebGIS/solutions-web-development/wiki/Testing-Tips-&-Tricks).
+        Please [check for existing issues](https://devtopia.esri.com/WebGIS/solutions-web-development/issues) to avoid duplicates. If someone has already opened an issue for what you are experiencing, please add a comment to the existing issue instead of creating a new one. For testing tips & tricks, please check the [Wiki](https://devtopia.esri.com/WebGIS/solutions-web-development/wiki/Testing-Tips-&-Tricks).
         
         Please do not modify any of the default labels, assignees, projects, milestones when submitting the issue.
   - type: dropdown
