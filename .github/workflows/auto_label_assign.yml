@@ -9,8 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  product_assignees:
-    if: ${{ contains(github.event.issue.labels.*.name, 'Bug') }}
+  bug_enhancement_assignees:
+    if: ${{ contains(github.event.issue.labels.*.name, 'Bug') || contains(github.event.issue.labels.*.name, 'Enhancement') }}
     runs-on: ubuntu-latest
     steps:
       - name: avezina
