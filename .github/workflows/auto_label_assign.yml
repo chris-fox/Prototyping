@@ -2,7 +2,7 @@ name: Auto Label and Assign Issues
 
 on:
   issues:
-    types: opened
+    types: assigned
 
 permissions:
   issues: write
@@ -339,7 +339,7 @@ jobs:
         uses: github/update-project-action@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: chris-fox
+          organization: chris-fox
           project_number: 4
           content_id: ${{ github.event.issue.node_id }}
           field: Priority
