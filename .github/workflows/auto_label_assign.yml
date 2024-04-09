@@ -342,5 +342,5 @@ jobs:
           organization: chris-fox
           project_number: 4
           content_id: ${{ github.event.issue.node_id }}
-          field: Priority
-          value: High
+          field: Status
+          value: Done
