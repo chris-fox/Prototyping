@@ -336,7 +336,7 @@ jobs:
     steps:
       - name: Update priority
         id: update_status
-        uses: github/update-project-action@v2
+        uses: github/update-project-action@v3
         with:
           github_token: ${{ secrets.PROJECTS_TOKEN }}
           organization: chris-fox
