@@ -338,7 +338,7 @@ jobs:
         id: update_status
         uses: github/update-project-action@v3
         with:
-          github_token: ${{ secrets.STATUS_UPDATE_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           organization: chris-fox
           project_number: 4
           content_id: ${{ github.event.issue.id }}
