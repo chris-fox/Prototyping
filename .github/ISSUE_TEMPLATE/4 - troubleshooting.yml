@@ -3,17 +3,56 @@ description: Request assistance in troubleshooting an issue with a configuration
 labels: ["Type: Troubleshooting"]
 #title: ""
 #assignees: [""]
-#projects: [""]
+projects: ["chris-fox/4"]
 body:
   - type: markdown
     attributes:
       value: |
-        - Please [check for existing issues](https://devtopia.esri.com/WebGIS/solutions-web-development/issues) to avoid duplicates. If someone has already opened an issue for what you are requesting, please add a comment to the existing issue instead of creating a new one.
+        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
+  - type: dropdown
+    id: esri-product
+    validations:
+      required: true
+    attributes:
+      label: Esri product
+      multiple: true
+      description: Select the products you need help troubleshooting.
+      options:
+        - N/A
+        - ArcGIS Arcade
+        - ArcGIS Dashboards
+        - ArcGIS Data Pipelines
+        - ArcGIS Enterprise
+        - ArcGIS Experience Builder
+        - ArcGIS Field Apps
+        - ArcGIS Hub
+        - ArcGIS Indoors
+        - ArcGIS Insights
+        - ArcGIS Instant Apps
+        - ArcGIS Knowledge
+        - ArcGIS Living Atlas
+        - ArcGIS Map Viewer
+        - ArcGIS Maps SDK for JavaScript
+        - ArcGIS Mission
+        - ArcGIS Monitor
+        - ArcGIS Online
+        - ArcGIS Pro
+        - ArcGIS QuickCapture
+        - ArcGIS Scene Viewer
+        - ArcGIS Site Scan
+        - ArcGIS StoryMaps
+        - ArcGIS Survey123
+        - ArcGIS Velocity
+        - ArcGIS Web AppBuilder
+        - ArcGIS Web Editor
+        - ArcGIS Workflow Manager
+        - Smart Forms (Editor)
+        - Other
   - type: textarea
     id: describe
     attributes:
-      label: Describe item type
-      description: Description of the item type, how it is created and how it will be used in your solution.
+      label: Describe the issue
+      description: Description the issue you are seeing in a configuration of ArcGIS or with packaging or deploying a solution.
     validations:
       required: true
   - type: textarea
@@ -33,8 +72,8 @@ body:
       description: What is the impact to you or your team?
       options:
         - Low - not time sensitive
-        - Medium - want for an upcoming release
-        - High - want for next release
+        - Medium - need to resolve for an upcoming release
+        - High - need to resolve for next release
   - type: textarea
     id: impact
     attributes:

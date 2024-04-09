@@ -330,3 +330,17 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             Dev: Widget / Component
+            
+  update_priority:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update priority
+        id: update_status
+        uses: github/update-project-action@v3
+        with:
+          github_token: ${{ secrets.STATUS_UPDATE_TOKEN }}
+          organization: chris-fox
+          project_number: 4
+          content_id: ${{ github.event.issue.id }}
+          field: Priority
+          value: High
