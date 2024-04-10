@@ -51,8 +51,8 @@ body:
   - type: textarea
     id: describe
     attributes:
-      label: Describe the review
-      description: Description of the review you are requesting. For example, a complete review of the information products or a specific technical pattern in one or more information products.
+      label: Describe requested review
+      description: Description of the review you are requesting. For example, a complete review of the information products or to review a specific technical pattern in one or more information products.
     validations:
       required: true
   - type: textarea
