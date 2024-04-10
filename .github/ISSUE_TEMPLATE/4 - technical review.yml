@@ -8,37 +8,57 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
+        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue. 
+  - type: dropdown
+    id: esri-product
+    validations:
+      required: true
+    attributes:
+      label: Esri product
+      multiple: true
+      description: Select the products with configurations that you would like reviewed.
+      options:
+        - N/A
+        - ArcGIS Arcade
+        - ArcGIS Dashboards
+        - ArcGIS Data Pipelines
+        - ArcGIS Enterprise
+        - ArcGIS Experience Builder
+        - ArcGIS Field Apps
+        - ArcGIS Hub
+        - ArcGIS Indoors
+        - ArcGIS Insights
+        - ArcGIS Instant Apps
+        - ArcGIS Knowledge
+        - ArcGIS Living Atlas
+        - ArcGIS Map Viewer
+        - ArcGIS Maps SDK for JavaScript
+        - ArcGIS Mission
+        - ArcGIS Monitor
+        - ArcGIS Online
+        - ArcGIS Pro
+        - ArcGIS QuickCapture
+        - ArcGIS Scene Viewer
+        - ArcGIS Site Scan
+        - ArcGIS StoryMaps
+        - ArcGIS Survey123
+        - ArcGIS Velocity
+        - ArcGIS Web AppBuilder
+        - ArcGIS Web Editor
+        - ArcGIS Workflow Manager
+        - Smart Forms (Editor)
+        - Other
   - type: textarea
     id: describe
     attributes:
-      label: Describe item type
-      description: Description of the item type, how it is created and how it will be used in your solution.
+      label: Describe the review
+      description: Description of the review you are requesting. For example, a complete review of the information products or a specific technical pattern in one or more information products.
     validations:
       required: true
   - type: textarea
-    id: relevant
+    id: links
     attributes:
-      label: Other relevant info
-      description: Add any other context or screenshots about the new item type request.
-    validations:
-      required: false
-  - type: dropdown
-    id: priority-impact
+      label: Information product links
+      description: Include the links to the information products you would like to be reviewed.
     validations:
       required: true
-    attributes:
-      label: Priority impact
-      multiple: false
-      description: What is the impact to you or your team?
-      options:
-        - Low - not time sensitive
-        - Medium - want for an upcoming release
-        - High - want for next release
-  - type: textarea
-    id: impact
-    attributes:
-      label: Impact
-      description: How does the issue effect your team or your work? Can range from minor to blocking or prohibiting workflows. Helps us prioritize what we'll work on and communicate with the responsible party first.
-    validations:
-      required: false

@@ -8,6 +8,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        For testing tips & tricks, please check the [Wiki](https://devtopia.esri.com/WebGIS/solutions-web-development/wiki/Testing-Tips-&-Tricks).
+        
         Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
   - type: dropdown
     id: esri-product
@@ -52,32 +54,13 @@ body:
     id: describe
     attributes:
       label: Describe the issue
-      description: Description the issue you are seeing in a configuration of ArcGIS or with packaging or deploying a solution.
+      description: Description of the issue you are seeing in a configuration of ArcGIS or with packaging or deploying a solution.
     validations:
       required: true
   - type: textarea
-    id: relevant
+    id: troubleshooting
     attributes:
-      label: Other relevant info
-      description: Add any other context or screenshots about the new item type request.
-    validations:
-      required: false
-  - type: dropdown
-    id: priority-impact
+      label: Troubleshooting steps
+      description: Describe the steps you have already tried to narrow down or workaround the issue.
     validations:
       required: true
-    attributes:
-      label: Priority impact
-      multiple: false
-      description: What is the impact to you or your team?
-      options:
-        - Low - not time sensitive
-        - Medium - need to resolve for an upcoming release
-        - High - need to resolve for next release
-  - type: textarea
-    id: impact
-    attributes:
-      label: Impact
-      description: How does the issue effect your team or your work? Can range from minor to blocking or prohibiting workflows. Helps us prioritize what we'll work on and communicate with the responsible party first.
-    validations:
-      required: false

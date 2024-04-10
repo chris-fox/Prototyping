@@ -9,36 +9,49 @@ body:
     attributes:
       value: |
         Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
+  - type: dropdown
+    id: esri-product
+    validations:
+      required: true
+    attributes:
+      label: Esri product
+      multiple: false
+      description: Select the product you would like an update for.
+      options:
+        - N/A
+        - ArcGIS Arcade
+        - ArcGIS Dashboards
+        - ArcGIS Data Pipelines
+        - ArcGIS Enterprise
+        - ArcGIS Experience Builder
+        - ArcGIS Field Apps
+        - ArcGIS Hub
+        - ArcGIS Indoors
+        - ArcGIS Insights
+        - ArcGIS Instant Apps
+        - ArcGIS Knowledge
+        - ArcGIS Living Atlas
+        - ArcGIS Map Viewer
+        - ArcGIS Maps SDK for JavaScript
+        - ArcGIS Mission
+        - ArcGIS Monitor
+        - ArcGIS Online
+        - ArcGIS Pro
+        - ArcGIS QuickCapture
+        - ArcGIS Scene Viewer
+        - ArcGIS Site Scan
+        - ArcGIS StoryMaps
+        - ArcGIS Survey123
+        - ArcGIS Velocity
+        - ArcGIS Web AppBuilder
+        - ArcGIS Web Editor
+        - ArcGIS Workflow Manager
+        - Smart Forms (Editor)
+        - Other
   - type: textarea
     id: describe
     attributes:
-      label: Describe item type
-      description: Description of the item type, how it is created and how it will be used in your solution.
+      label: Describe the update
+      description: Description the information or status update you are requesting.
     validations:
       required: true
-  - type: textarea
-    id: relevant
-    attributes:
-      label: Other relevant info
-      description: Add any other context or screenshots about the new item type request.
-    validations:
-      required: false
-  - type: dropdown
-    id: priority-impact
-    validations:
-      required: true
-    attributes:
-      label: Priority impact
-      multiple: false
-      description: What is the impact to you or your team?
-      options:
-        - Low - not time sensitive
-        - Medium - want for an upcoming release
-        - High - want for next release
-  - type: textarea
-    id: impact
-    attributes:
-      label: Impact
-      description: How does the issue effect your team or your work? Can range from minor to blocking or prohibiting workflows. Helps us prioritize what we'll work on and communicate with the responsible party first.
-    validations:
-      required: false

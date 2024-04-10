@@ -11,7 +11,7 @@ permissions:
 jobs:
   bug_enhancement_assignees:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.issue.labels.*.name, format('Type{0} Bug', ':')) || contains(github.event.issue.labels.*.name, format('Type{0} Enhancement', ':')) }}
+    if: ${{ contains(github.event.issue.labels.*.name, format('Type{0} Bug', ':')) || contains(github.event.issue.labels.*.name, format('Type{0} Enhancement', ':')) || contains(github.event.issue.labels.*.name, format('Type{0} Product Update', ':')) }}
     steps:
       - name: avezina
         uses: actions-ecosystem/action-add-assignees@v1.0.0
@@ -330,17 +330,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             Dev: Widget / Component
-            
-  update_priority:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Update priority
-        id: update_status
-        uses: github/update-project-action@v3
-        with:
-          github_token: ${{ secrets.PROJECTS_TOKEN }}
-          organization: chris-fox
-          project_number: 4
-          content_id: ${{ github.event.issue.node_id }}
-          field: Priority
-          value: High
