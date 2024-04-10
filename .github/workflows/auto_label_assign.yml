@@ -2,7 +2,7 @@ name: Auto Label and Assign Issues
 
 on:
   issues:
-    types: assigned
+    types: opened
 
 permissions:
   issues: write
