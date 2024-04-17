@@ -1,6 +1,6 @@
-name: Troubleshooting
+name: Troubleshooting Assistance
 description: Request assistance in troubleshooting an issue with a configuration of ArcGIS impacting an ArcGIS Solution or an issue with packaging or deploying a solution.
-labels: ["Type: Troubleshooting"]
+labels: ["Type: Troubleshooting Assistance"]
 #title: ""
 #assignees: [""]
 projects: ["chris-fox/4"]
