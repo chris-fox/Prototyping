@@ -50,6 +50,13 @@ body:
         - ArcGIS Workflow Manager
         - Smart Forms (Editor)
         - Other
+  - type: input
+    id: solution
+    attributes:
+      label: Solutions impacted
+      description: What solutions would benefit from this enhancement?
+    validations:
+      required: true
   - type: textarea
     id: describe
     attributes:

@@ -50,6 +50,13 @@ body:
         - ArcGIS Workflow Manager
         - Smart Forms (Editor)
         - Other
+  - type: input
+    id: solution
+    attributes:
+      label: Solutions impacted
+      description: What solutions are impacted by this bug?
+    validations:
+      required: true
   - type: textarea
     id: describe
     attributes:
