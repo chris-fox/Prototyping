@@ -9,8 +9,6 @@ body:
     attributes:
       value: |
         If you are requestion a new App Template, Widget or Web Component (for example for ExB or Instant Apps) please review and get approval from your lead before submitting. This is a larger development effort that needs to be prioritized with other ongoing development projects.
-        
-        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
   - type: dropdown
     id: development
     validations:
@@ -66,6 +64,11 @@ body:
         - ArcGIS Workflow Manager
         - Smart Forms (Editor)
         - Other
+  - type: input
+    id: solution
+    attributes:
+      label: Solutions impacted
+      description: What solutions would benefit from this new development?
   - type: textarea
     id: describe
     attributes:

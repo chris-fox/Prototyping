@@ -5,10 +5,6 @@ labels: ["Type: Implementation Research"]
 #assignees: [""]
 projects: ["chris-fox/4"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
   - type: dropdown
     id: esri-product
     validations:
@@ -48,11 +44,16 @@ body:
         - ArcGIS Workflow Manager
         - Smart Forms (Editor)
         - Other
+  - type: input
+    id: solution
+    attributes:
+      label: Solutions impacted
+      description: What solutions are you requesting reasearch assistance for?
   - type: textarea
     id: describe
     attributes:
       label: Describe capability or workflow
-      description: Description of the capability you want to learn more about or the workflow you are trying to accomplish.
+      description: Description of the capability you want to learn more about or the workflow you are trying to accomplish in the context of your solution.
     validations:
       required: true
   - type: textarea

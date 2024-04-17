@@ -9,8 +9,6 @@ body:
     attributes:
       value: |
         Please [check for existing issues](https://devtopia.esri.com/WebGIS/solutions-web-development/issues) to avoid duplicates. If someone has already opened an issue for what you are requesting, please add a comment to the existing issue instead of creating a new one.
-        
-        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
   - type: dropdown
     id: solutions-app
     validations:
@@ -23,11 +21,16 @@ body:
         - ArcGIS Solutions Deployment app
         - ArcGIS Solutions Creation app
         - Solution Item Tools
+  - type: input
+    id: solution
+    attributes:
+      label: Solutions impacted
+      description: What solutions would benefit from this enhancement?
   - type: textarea
     id: describe
     attributes:
       label: Describe requirements
-      description: Description of what's missing and what you want to happen.
+      description: Description of the capability that is missing and how it impacts your solution (optionally include screenshots/GIFs).
     validations:
       required: true
   - type: textarea

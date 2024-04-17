@@ -9,8 +9,6 @@ body:
     attributes:
       value: |
         Please [check for existing issues](https://devtopia.esri.com/WebGIS/solutions-web-development/issues) to avoid duplicates. If someone has already opened an issue for what you are experiencing, please add a comment to the existing issue instead of creating a new one. For testing tips & tricks, please check the [Wiki](https://devtopia.esri.com/WebGIS/solutions-web-development/wiki/Testing-Tips-&-Tricks).
-        
-        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue.
   - type: dropdown
     id: esri-product
     validations:
@@ -61,7 +59,7 @@ body:
     id: describe
     attributes:
       label: Describe the bug
-      description: A clear description of the issue (optionally include before/after screenshots/GIFs).
+      description: A clear description of the issue and how it impacts your solution (optionally include before/after screenshots/GIFs). 
     validations:
       required: true
   - type: textarea
@@ -76,10 +74,9 @@ body:
     attributes:
       label: Reproduction steps & sample
       description: |
-        Provide clear, numbered steps to reproduce this bug with a sample app and data if needed. Recordings are also helpful. Make sure that web maps, web scenes, portal items, services and other resources used to reproduce this bug are accessible.
+        Provide clear, numbered steps to reproduce this bug with a sample app and data if needed. Recordings are also helpful. Make sure that web maps, web scenes, portal items, services and other resources used to reproduce this bug are accessible. Please provide the organization url if it is not clear in the item's url.
       placeholder: |
-        Link to web map/app:
-        1. Go to '...'
+        1. Go to 'link to web map/app'
         2. Click on '...'
         3. ...
     validations:

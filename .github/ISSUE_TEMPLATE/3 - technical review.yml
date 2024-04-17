@@ -5,10 +5,6 @@ labels: ["Type: Technical Review"]
 #assignees: [""]
 projects: ["chris-fox/4"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Please do not modify any of the default labels, assignees, projects, or milestones when submitting the issue. 
   - type: dropdown
     id: esri-product
     validations:
@@ -48,6 +44,11 @@ body:
         - ArcGIS Workflow Manager
         - Smart Forms (Editor)
         - Other
+  - type: input
+    id: solution
+    attributes:
+      label: Solutions impacted
+      description: What solutions are you requesting a review for?
   - type: textarea
     id: describe
     attributes:
@@ -59,6 +60,6 @@ body:
     id: links
     attributes:
       label: Information product links
-      description: Include the links to the information products you would like to be reviewed.
+      description: Include the links to the information products you would like to be reviewed. Please provide the organization url if it is not clear in the item's url.
     validations:
       required: true
